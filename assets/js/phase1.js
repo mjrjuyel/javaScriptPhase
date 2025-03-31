@@ -77,5 +77,6 @@ if(afterTax < expense){
 }
 
 if(overSpending){
+     
      console.log(overSpending);
 }
