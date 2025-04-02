@@ -49,6 +49,8 @@
 // // var transport = 2000;
 // // var entertainment = 5000;
 
+
+
 // // var expense = 2000;
 // var remainBalance = afterTax - expense;
 // var saving = remainBalance * (20/100);
