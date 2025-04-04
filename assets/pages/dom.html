@@ -41,13 +41,18 @@
         </div>
         <hr class="my-10 w-full border-(--pattern-fg)" />
         <p class="flex flex-col font-semibold">
-          <a href="https://tailwindcss.com/docs"
+          <a href="https://tailwindcss.com/docs" id="demo"
             class="bg-violet-300 py-3 px-2 underline-offset-3 border rounded-xl hover:decoration-2 dark:text-white">Read
             the docs &rarr;</a>
-          <a href="#" id="content"
-            class="text-gray-950  decoration-sky-400 underline-offset-3 hover:decoration-2 dark:text-white">Read
-            the docs &rarr;</a>
+          <a href="#" id="content" onclick="myName()"
+            class="text-gray-950  decoration-sky-400 underline-offset-3 hover:decoration-2 dark:text-white">My Function </a>
         </p>
+
+        <select type="text" onchange="myName()">
+          <option>number1</option>
+          <option>number2</option>
+          <option>number3</option>
+        </select>
       </div>
     </div>
     <div
@@ -59,9 +64,9 @@
     <div class="relative -bottom-px col-span-full col-start-1 row-start-2 h-px bg-(--pattern-fg)"></div>
     <div class="relative -top-px col-span-full col-start-1 row-start-4 h-px bg-(--pattern-fg)"></div>
   </div>
-  <script src="assets/js/custom.js"></script>
-  <script src="assets/js/localStorage.js"></script>
-  <script src="assets/js/phase1.js"></script>
+  <!-- <script src="../js/custom.js"></script> -->
+  <!-- <script src="../js/localStorage.js"></script> -->
+  <script src="../js/dom.js"></script>
 </body>
 
 </html>
