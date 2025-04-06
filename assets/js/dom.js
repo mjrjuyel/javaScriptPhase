@@ -1,10 +1,20 @@
-var element = document.getElementById('demo')
+// ------- Dom Event Handler
 
-var text = element.innerText;
-console.log(text);
+// var element = document.getElementById('demo')
 
-function myName(){
-    let number = Math.ceil(Math.random()*10);
+// var text = element.innerText;
+// console.log(text);
 
-    console.log(number);
-}
+// function myName(){
+//     let number = Math.ceil(Math.random()*10);
+//     document.getElementById('output').innerHTML = number;
+// }
+// var imageTake = document.querySelector('#imageShow');
+
+// function image1(){
+//     imageTake.src = '../images/id.jpg';
+// }
+
+// function image2(){
+//     imageTake.src = '../images/juyel.jpg';
+// }

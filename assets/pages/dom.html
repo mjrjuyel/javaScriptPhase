@@ -14,6 +14,20 @@
       <div class="rounded-xl bg-white p-10 text-sm/7 text-gray-700 dark:bg-gray-950 dark:text-gray-300">
         <div class="space-y-6">
           <p>An advanced online playground for Tailwind CSS, including support for things like:</p>
+
+          <p class="ml-3">
+            Adding custom utilities with
+            <code class="font-mono font-medium text-gray-950 dark:text-white">@utility</code>
+          </p>
+          <p class="ml-3" onclick="image1()">
+            Image 1
+            <code class="font-mono font-medium text-gray-950 dark:text-white">@utility</code>
+          </p>
+          <p class="ml-3" onclick="image2()">
+            Image 2
+            <code class="font-mono font-medium text-gray-950 dark:text-white">@utility</code>
+          </p>
+
           <ul class="space-y-3">
             <li class="flex">
               <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
@@ -32,10 +46,7 @@
                 <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
                 <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
               </svg>
-              <p class="ml-3">
-                Adding custom utilities with
-                <code class="font-mono font-medium text-gray-950 dark:text-white">@utility</code>
-              </p>
+             
             </li>
         
         </div>
@@ -46,6 +57,8 @@
             the docs &rarr;</a>
           <a href="#" id="content" onclick="myName()"
             class="text-gray-950  decoration-sky-400 underline-offset-3 hover:decoration-2 dark:text-white">My Function </a>
+            <p id="output">okk</p>
+            <img id="imageShow" src="" width="" height="" >
         </p>
 
         <select type="text" onchange="myName()">
