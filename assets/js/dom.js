@@ -32,29 +32,31 @@
 // h1Header.classList.add('Heading');
 
 // ====== Create NEw eLEMENT using DOM -=====
-var fruits = ["Mango","Apple","Orange",'PineApple'];
-var ulList = document.getElementById('ul_list');
+// var fruits = ["Mango","Apple","Orange",'PineApple'];
+// var ulList = document.getElementById('ul_list');
 
-fruits.forEach(fruit => {
-    var liList = document.createElement('li');
-    liList.textContent = fruit;
-    liList.classList.add('active');
-    ulList.appendChild(liList);
-});
+// fruits.forEach(fruit => {
+//     var liList = document.createElement('li');
+//     liList.textContent = fruit;
+//     liList.classList.add('active');
+//     ulList.appendChild(liList);
+// });
 
 
-var liContent = document.querySelectorAll('#ul_list li');
+// var liContent = document.querySelectorAll('#ul_list li');
 
-liContent.forEach(item => {
-    item.addEventListener('mouseup', function(e){
-        liContent.forEach(li => {
-            li.classList.remove('active');
-            li.style.fontSize = '10px';
-        });
+// liContent.forEach(item => {
+//     item.addEventListener('mouseup', function(e){
+//         liContent.forEach(li => {
+//             li.classList.remove('active');
+//             li.style.fontSize = '10px';
+//         });
 
-        item.style.fontSize = '20px';
-    });
-});
+//         item.style.fontSize = '20px';
+//     });
+// });
+
+
 
 
 
