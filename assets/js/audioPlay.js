@@ -54,6 +54,12 @@ buttons.forEach((button,index) => {
     var buttonText = button.innerText;
     console.log(buttonText);
 
+    button.classList.add('active');
+
+    setTimeout(function(){
+      button.classList.remove('active');
+    },1000)
+
     if(currentAudio && currentAudio != audioPlayers[index]){
       currentAudio.pause();
       currentAudio.currentTime = 0;
