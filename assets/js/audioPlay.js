@@ -38,58 +38,62 @@ const audioFiles = [
   "../audio/ek_raat_vilen.mp3",
   "../audio/you_cant_touch_this.mp3"
 ];
+var restartBtn = document.getElementById('restart');
 
 // Create audio objects in advance
 const audioPlayers = audioFiles.map(file => {
-  const audio = new Audio(file);
-  audio.preload = 'auto'; // Preload audio files
-  return audio;
+  const audioMusic = new Audio(file);
+  audioMusic.preload = 'auto'; // Preload audio files
+  return audioMusic;
 });
 
 let currentAudio = null;
 
-buttons.forEach((button, index) => {
-  button.addEventListener('click', function() {
-    const buttonText = button.innerText;
+buttons.forEach((button,index) => {
+  button.addEventListener('click',function(){
+    var buttonText = button.innerText;
     console.log(buttonText);
-    
-    // Pause currently playing audio if different from the clicked one
-    if (currentAudio && currentAudio !== audioPlayers[index]) {
+
+    if(currentAudio && currentAudio != audioPlayers[index]){
       currentAudio.pause();
       currentAudio.currentTime = 0;
     }
-    
-    // Get the audio for this button
+
     const audio = audioPlayers[index];
-    
-    // Toggle play/pause if clicking the same button
-    if (currentAudio === audio) {
-      if (audio.paused) {
+
+    console.log(audio);
+
+    if(currentAudio === audio){
+      if(audio.paused){
         audio.play();
-      } else {
+      }else{
         audio.pause();
       }
-      return;
+      return
     }
-    
-    // Configure based on button
-    switch(buttonText) {
+
+    switch(buttonText){
       case 'sound1':
-        audio.loop = true;
-        audio.currentTime = 15;
-        break;
+            audio.loop = true;
+            break;
       case 'sound2':
-        audio.loop = true;
-        audio.currentTime = 5;
-        break;
-      case 'sound3':
-        audio.loop = true;
-        audio.currentTime = 0;
-        break;
-    }
-    
-    // Play the audio
-    audio.play();
-    currentAudio = audio;
+            audio.loop = true;
+            break;
+      case 'sound2':
+            audio.loop = true;
+            break;
+      }
+
+      audio.play();
+      currentAudio = audio;
   });
+});
+
+restartBtn.addEventListener('click', function() {
+  if (currentAudio) {
+    currentAudio.currentTime = 0; // Reset to beginning
+    if (currentAudio.paused) {
+      currentAudio.play(); // Auto-play if paused
+    }
+  }
 });
