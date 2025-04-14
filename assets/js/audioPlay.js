@@ -49,51 +49,53 @@ const audioPlayers = audioFiles.map(file => {
 
 let currentAudio = null;
 
-buttons.forEach((button,index) => {
-  button.addEventListener('click',function(){
-    var buttonText = button.innerText;
-    console.log(buttonText);
+// buttons.forEach((button,index) => {
+//   button.addEventListener('click',function(){
+//     var buttonText = button.innerText;
+//     console.log(buttonText);
 
-    button.classList.add('active');
+//     button.classList.add('active');
 
-    setTimeout(function(){
-      button.classList.remove('active');
-    },1000)
+//     setTimeout(function(){
+//       button.classList.remove('active');
+//     },1000)
 
-    if(currentAudio && currentAudio != audioPlayers[index]){
-      currentAudio.pause();
-      currentAudio.currentTime = 0;
-    }
+//     if(currentAudio && currentAudio != audioPlayers[index]){
+//       currentAudio.pause();
+//       currentAudio.currentTime = 0;
+//     }
 
-    const audio = audioPlayers[index];
+//     const audio = audioPlayers[index];
 
-    console.log(audio);
+//     console.log(audio);
 
-    if(currentAudio === audio){
-      if(audio.paused){
-        audio.play();
-      }else{
-        audio.pause();
-      }
-      return
-    }
+//     if(currentAudio === audio){
+//       if(audio.paused){
+//         audio.play();
+//       }else{
+//         audio.pause();
+//       }
+//       return
+//     }
 
-    switch(buttonText){
-      case 'sound1':
-            audio.loop = true;
-            break;
-      case 'sound2':
-            audio.loop = true;
-            break;
-      case 'sound2':
-            audio.loop = true;
-            break;
-      }
+//     switch(buttonText){
+//       case 'sound1':
+//             audio.loop = true;
+//             break;
+//       case 'sound2':
+//             audio.loop = true;
+//             break;
+//       case 'sound2':
+//             audio.loop = true;
+//             break;
+//       }
 
-      audio.play();
-      currentAudio = audio;
-  });
-});
+//       audio.play();
+//       currentAudio = audio;
+//   });
+// });
+
+
 
 restartBtn.addEventListener('click', function() {
   if (currentAudio) {
