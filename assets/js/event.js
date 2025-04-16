@@ -4,6 +4,9 @@ var input = document.querySelectorAll('input[name=visitor]');
 // function handler(e){
 //   console.log(e.target);
 // }
+var newElement = document.createElement('span');
+var getElement = document.querySelector('#demo');
+
 Array.from(input).map(inp =>{
   inp.addEventListener('change', handler);
 
@@ -12,10 +15,10 @@ Array.from(input).map(inp =>{
     if(e.target.checked){
       if(number == "Arjun"){
         console.log('Hi I am Arjun');
+        var content = document.createTextNode('I am From JavaScript');
+        newElement.appendChild(content);
 
-        var newElement = document.createElement('span');
-        var getElement = document.querySelector('#demo');
-        newElement.createTextNode('I am From JavaScript');
+        newElement.style.color = "#fff";
         getElement.appendChild(newElement);
       }
     }
