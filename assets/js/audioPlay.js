@@ -41,13 +41,13 @@ const audioFiles = [
 var restartBtn = document.getElementById('restart');
 
 // Create audio objects in advance
-const audioPlayers = audioFiles.map(file => {
-  const audioMusic = new Audio(file);
-  audioMusic.preload = 'auto'; // Preload audio files
-  return audioMusic;
-});
+// const audioPlayers = audioFiles.map(file => {
+//   const audioMusic = new Audio(file);
+//   audioMusic.preload = 'auto'; // Preload audio files
+//   return audioMusic;
+// });
 
-let currentAudio = null;
+// let currentAudio = null;
 
 // buttons.forEach((button,index) => {
 //   button.addEventListener('click',function(){
@@ -96,12 +96,44 @@ let currentAudio = null;
 // });
 
 
+// restartBtn.addEventListener('click', function() {
+//   if (currentAudio) {
+//     currentAudio.currentTime = 0; // Reset to beginning
+//     if (currentAudio.paused) {
+//       currentAudio.play(); // Auto-play if paused
+//     }
+//   }
+// });
 
-restartBtn.addEventListener('click', function() {
-  if (currentAudio) {
-    currentAudio.currentTime = 0; // Reset to beginning
-    if (currentAudio.paused) {
-      currentAudio.play(); // Auto-play if paused
-    }
-  }
+// console.log(buttons.length);
+
+// document.addEventListener('keypress',function(e){
+//   var text = e.key;
+//   console.log(text);
+//   playaudio(text);
+// });
+
+// // var currentAudio = null;
+// function playaudio(text){
+//   switch(text){
+//     case 'a':
+//       var audio = new Audio('../audio/beautiful_things.mp3')
+//       audio.play();
+//       break;
+//     case 'b':
+//       var audio = new Audio('../audio/ek_raat_vilen.mp3')
+//       audio.play();
+//       break;
+//     case 'c':
+//       var audio = new Audio('../audio/you_cant_touch_this.mp3')
+//       audio.play();
+//       break;
+//   }
+// }
+
+document.addEventListener('keypress',function(e){
+  var text = e.key;
+  console.log(text);
+  var demo = document.getElementById('restart');
+  demo.innerHTML = "You Have Press Key is : " + text;
 });
