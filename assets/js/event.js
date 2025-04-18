@@ -38,16 +38,30 @@ const form = document.querySelector('form');
 const name = form.querySelector('div div #first_name');
 const phone = form.querySelector('div div #phone');
 const detail = form.querySelector('div #detail');
+const checkboxes = form.querySelectorAll('input[name="visitor"]');
+
 
 form.addEventListener('submit', formSubmit);
 
+// const selectedVisitors = Array.from(visitors).map(visitor => visitor.value);
 function formSubmit(e){
     e.preventDefault();
     console.log(detail);
+
+    const selectedVisitors = [];
+    checkboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+        selectedVisitors.push(checkbox.value);
+    }
+    });
+
+console.log(selectedVisitors); // ["Raihan", "Arjun"]
+
     var student = {
         'name' : name.value,
         'phone' : phone.value,
         'detail' : detail.value,
+        'visitor' : selectedVisitors,
     }
     console.log(student);
 
