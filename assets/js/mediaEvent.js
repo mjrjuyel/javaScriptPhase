@@ -36,6 +36,7 @@ function togglePlay() {
     video.play();
   } else {
     video.pause();
+    
   }
 }
 
