@@ -106,14 +106,79 @@ let number2 = [7,8,9];
 
 // ex2
 
-let cars = {
-     sum : function(){
-        return 2+3;
-     }
-    //  or
-    // sum(){
-    //    return 2+3;
-    // }
+// let cars = {
+//      sum : function(){
+//         return 2+3;
+//      }
+//     //  or
+//     // sum(){
+//     //    return 2+3;
+//     // }
 
+// }
+// console.log(cars.sum()); // 5
+
+// practice for object literal
+// let author = "F. Scott Fitzgerald";
+// let key = "year";
+// const book = {
+//     title : "The Great Gatsby",
+//     author,
+//     [key + "Published"] : 1925,
+//     summary(){
+//         return `${this.title} By ${this.author}`;
+//     } ,
+//     detail : {
+//         genre : "Fiction",
+//         pages : 180
+//     }
+// }
+
+// console.log(book.summary()); // "The Great Gatsby by F. Scott Fitzgerald"
+// console.log(book.detail.genre); // "Fiction"
+// console.log(book.yearPublished);
+// console.log(book);
+
+// practice 2
+// let name = 'Laptop';
+// let key = 'stock';
+// const product ={
+//     name,
+//     price : 999.9,
+//     [key+"Level"] : 10,
+//     isInStock(){
+//             return this.stockLevel > 0;
+//         },
+//     specs : {
+//         brand : "Tecno",
+//         ram : 16,
+//     }
+// }
+
+// console.log(product.isInStock());
+// console.log(product.specs);
+
+// practice 3
+let eventName = "Music Festival";
+let key = "event";
+
+const event = {
+    name: eventName,
+    date: "2025-04-25",
+    [key + "Type"] : "Concert",
+    getDetails(){
+        return `${this.name} on ${this.date}`;
+    },
+    location : {
+        city : "Austin",
+        venue : "City Arena"
+    },
+    set setName(setname){
+        // return `${this.name} ${this.eventType} at ${this.location.venue}`;
+        this.name = setname;
+    }
 }
-console.log(cars.sum()); // 5
+console.log(event.getDetails()); // Music Festival on 2025-4-24
+event.setName = "Video Festival";
+console.log(event.getDetails()); // Video Festival on 2025-4-24
+// console.log(event.setName("Video Festival"));
