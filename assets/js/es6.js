@@ -90,3 +90,30 @@ let number2 = [7,8,9];
 
 // let person = {...person1, ...person2}
 // console.log(person);
+
+// 4. object literal
+
+// ex1
+// function index(name,age){
+//     let person = {
+//         name,
+//         age,
+//         hobbies : ['garden','cricket','Movies'],
+//     }
+//     return person;
+// }
+// console.log(index('Juyel',26)); // { name: 'Juyel', age: 26, hobbies: [ 'garden', 'cricket', 'Movies' ] }
+
+// ex2
+
+let cars = {
+     sum : function(){
+        return 2+3;
+     }
+    //  or
+    // sum(){
+    //    return 2+3;
+    // }
+
+}
+console.log(cars.sum()); // 5
