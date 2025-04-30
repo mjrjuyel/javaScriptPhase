@@ -58,11 +58,11 @@
 
 //  3. Spread operator 
 
-function FetchSum(a){
-    return a;
-}
-let numbers = [2,4,6];
-let number2 = [7,8,9];
+// function FetchSum(a){
+//     return a;
+// }
+// let numbers = [2,4,6];
+// let number2 = [7,8,9];
 
 // concate Array :
 // numbers.push(...number2); // outpput [2,4,6,7,8,9]
@@ -159,26 +159,81 @@ let number2 = [7,8,9];
 // console.log(product.specs);
 
 // practice 3
-let eventName = "Music Festival";
-let key = "event";
+// let eventName = "Music Festival";
+// let key = "event";
 
-const event = {
-    name: eventName,
-    date: "2025-04-25",
-    [key + "Type"] : "Concert",
-    getDetails(){
-        return `${this.name} on ${this.date}`;
-    },
-    location : {
-        city : "Austin",
-        venue : "City Arena"
-    },
-    set setName(setname){
-        // return `${this.name} ${this.eventType} at ${this.location.venue}`;
-        this.name = setname;
-    }
+// const event = {
+//     name: eventName,
+//     date: "2025-04-25",
+//     [key + "Type"] : "Concert",
+//     getDetails(){
+//         return `${this.name} on ${this.date}`;
+//     },
+//     location : {
+//         city : "Austin",
+//         venue : "City Arena"
+//     },
+//     set setName(setname){
+//         // return `${this.name} ${this.eventType} at ${this.location.venue}`;
+//         this.name = setname;
+//     }
+// }
+// console.log(event.getDetails()); // Music Festival on 2025-4-24
+// event.setName = "Video Festival";
+// console.log(event.getDetails()); // Video Festival on 2025-4-24
+// // console.log(event.setName("Video Festival"));
+
+// for of and for in loop
+// For of used in Array iterate and For in Used in Object Iterate
+
+let fruits = ["Mango","Banana","Apple"];
+
+// for(let fruit of fruits){
+//     console.log(fruit);
+// }
+
+// const book = {
+//     name : "The Great Gatsby",
+//     published : "1925",
+//     info(){
+//         return `${this.name} in ${this.published}`;
+//     }
+// }
+// for(let index in book){
+//     console.log(`${index} : ${book[index]}`);
+// }
+
+// fruits.forEach((item ,index)=> {
+//     for(let i = 0 ; i <= fruits.length ; i++){
+//         setTimeout(() => {
+//             console.log(`${index} : ${item}`);
+//         }, 1000 * i);
+//     }
+// });
+// 
+// arrow function with filter and map
+
+const student = [ {
+    name : "juyel",
+    age : 25,
+    gpa : 4.00
+},
+{
+    name : "Rahim",
+    age : 25,
+    gpa : 3.50
+},
+{
+    name : "jasiim",
+    age : 25,
+    gpa : 4.50
 }
-console.log(event.getDetails()); // Music Festival on 2025-4-24
-event.setName = "Video Festival";
-console.log(event.getDetails()); // Video Festival on 2025-4-24
-// console.log(event.setName("Video Festival"));
+]
+
+const filterData = student.filter(function(x){
+    return x.gpa >= 4.00;
+}).map( y => {
+    return y.age;
+});
+
+console.log(filterData);
