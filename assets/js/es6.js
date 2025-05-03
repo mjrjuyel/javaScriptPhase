@@ -234,6 +234,8 @@ const filterData = student.filter(function(x){
     return x.gpa >= 4.00;
 }).map( y => {
     return y.age;
+
+    
 });
 
 console.log(filterData);
