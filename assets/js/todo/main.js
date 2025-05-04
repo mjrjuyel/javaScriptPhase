@@ -38,42 +38,39 @@
 
 // // Initial render on page load
 // renderTodos();
-
 let todos = JSON.parse(localStorage.getItem('todo')) || [];
-function storeLocal(){
-    localStorage.setItem('todo',JSON.stringify(todos));
-}
 
+function addItem(){
+    localStorage.setItem('todo',JSON.stringify(todos))
+}
+console.log(todos);
 function addTodo(){
-    const input = document.querySelector('#todoInput');
-    // console.log(input);
-    const task = input.value.trim();
-    if(task !== ''){
+    const input = document.getElementById('todoInput');
+    let  task = input.value.trim();
+    if(task != ''){
         todos.push(task);
-        storeLocal();
-        renderList();
+        addItem();
+        renderItem();
+        console.log(todos);
         input.value = '';
     }
-    console.log(todos);
 }
 
-function renderList(){
-    const list = document.getElementById('todo-list');
-    list.innerHTML = '';
+function renderItem(){
+    const todolist = document.getElementById('todo-list');
+    todolist.innerHTML = '';
 
-    todos.forEach((task,index) => {
+    todos.forEach((content,index) => {
         const li = document.createElement('li');
-        li.innerHTML = `<span>${task}</span> <button onclick="taskDelete(${index})">Delete</button>`;
-        list.appendChild(li);
-        console.log(list);
+        li.innerHTML = `${index + 1} - <span>${content} |</span><button onclick="deleteItem(${index})">Delete</button>`;
+        todolist.appendChild(li);
+        console.log(li);
     });
 }
 
-function taskDelete(index){
+renderItem();
+function deleteItem(index){
     todos.splice(index,1);
-    storeLocal();
-    renderList();
-    console.log('done');
+    addItem();
+    renderItem();
 }
-// localStorage.clear('todo');
-renderList();
