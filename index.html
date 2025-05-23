@@ -5,15 +5,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tailwind Css</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+
+  <link href="assets/js/jquery-clockpicker.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-  <div class="relative grid min-h-screen grid-cols-[1fr_2.5rem_auto_2.5rem_1fr] grid-rows-[1fr_1px_auto_1px_1fr] bg-white [--pattern-fg:var(--color-gray-950)]/5 dark:bg-gray-950 dark:[--pattern-fg:var(--color-white)]/10">
+  <div
+    class="relative grid min-h-screen grid-cols-[1fr_2.5rem_auto_2.5rem_1fr] grid-rows-[1fr_1px_auto_1px_1fr] bg-white [--pattern-fg:var(--color-gray-950)]/5 dark:bg-gray-950 dark:[--pattern-fg:var(--color-white)]/10">
     <div class="col-start-3 row-start-3 flex max-w-lg flex-col bg-gray-100 p-2 dark:bg-white/10">
       <div class="rounded-xl bg-white p-10 text-sm/7 text-gray-700 dark:bg-gray-950 dark:text-gray-300">
         <div class="space-y-6">
           <p>An advanced online playground for Tailwind CSS, including support for things like:</p>
+
+
+          <div class="mb-6">
+            <label for="large-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Large
+              input</label>
+            <input type="text" id="large-input"
+              class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          </div>
+          <div class="mb-6">
+            <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Default
+              input</label>
+            <input type="text" 
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          </div>
+          <div>
+            <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Small
+              input</label>
+            <input type="time"   id="input-a" value="" data-default="20:48"
+              class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          </div>
+
+
           <ul class="space-y-3">
             <li class="flex">
               <svg class="h-[1lh] w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
@@ -37,7 +68,7 @@
                 <code class="font-mono font-medium text-gray-950 dark:text-white">@utility</code>
               </p>
             </li>
-        
+
         </div>
         <hr class="my-10 w-full border-(--pattern-fg)" />
         <p class="flex flex-col font-semibold">
@@ -56,12 +87,26 @@
     <div
       class="relative -left-px col-start-4 row-span-full row-start-1 border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed">
     </div>
+
     <div class="relative -bottom-px col-span-full col-start-1 row-start-2 h-px bg-(--pattern-fg)"></div>
     <div class="relative -top-px col-span-full col-start-1 row-start-4 h-px bg-(--pattern-fg)"></div>
   </div>
-  <script src="assets/js/custom.js"></script>
+  <!-- <script src="assets/js/custom.js"></script>
   <script src="assets/js/localStorage.js"></script>
-  <script src="assets/js/phase1.js"></script>
+  <script src="assets/js/phase1.js"></script> -->
 </body>
 
+<script>
+
+  $('document').ready(function(){
+
+  var input = $('#input-a');
+  input.clockpicker({
+      autoclose: true,
+      dateFormat: "H:i",
+      time_24hr: false
+  });
+});
+</script>
+<script src="assets/js/jquery-clockpicker.min.js"></script>
 </html>
