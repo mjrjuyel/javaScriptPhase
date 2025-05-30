@@ -54,6 +54,8 @@ function addTodo(){
         console.log(todos);
         input.value = '';
     }
+
+    
 }
 
 function renderItem(){
