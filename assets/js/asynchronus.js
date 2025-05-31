@@ -1,32 +1,26 @@
 
-
-const task1 = () => {
-  console.log('TaskOne');
+function task1(){
+  console.log("task1");
 }
 
-const taskloading = () => {
-  console.log('Task is Loading');
+function task2(){
+  console.log('task 2 ruuning');
+
+  setTimeout(Process,2000);
 }
 
-const task2 = () => {
-  setTimeout(taskloading, 500);
-}
-const task3 = () => {
+const Process = () => console.log("task 2 is about to process");
 
-  setTimeout(function(){
-    console.log('TaskThree 2');
-  },1000)
-  console.log('TaskThree');
-}
-const task4 = () => {
-  console.log('TaskFour');
-}
-const task5 = () => {
-  console.log('TaskFive');
+function task3(){
+
+  setTimeout( () => {
+    console.log('Task 2 Complete')
+  },3000);
+  console.log("task3");
 }
 
 task1();
 task2();
 task3();
-task4();
-task5();
+// task4();
+// task5();
