@@ -8,9 +8,7 @@ function task2(){
 
   setTimeout(Process,2000);
 }
-
 const Process = () => console.log("task 2 is about to process");
-
 function task3(){
 
   setTimeout( () => {
