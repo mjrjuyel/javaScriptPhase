@@ -7,6 +7,8 @@ export function renderTodos(todos){
     const li = document.createElement('li');
     li.textContent = todo;
 
+    
+
     todoList.appendChild(li);
     });
 }
