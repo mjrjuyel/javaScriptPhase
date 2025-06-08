@@ -41,10 +41,7 @@
 //     liList.classList.add('active');
 //     ulList.appendChild(liList);
 // });
-
-
 // var liContent = document.querySelectorAll('#ul_list li');
-
 // liContent.forEach(item => {
 //     item.addEventListener('mouseup', function(e){
 //         liContent.forEach(li => {
