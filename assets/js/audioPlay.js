@@ -89,11 +89,14 @@ var restartBtn = document.getElementById('restart');
 //             audio.loop = true;
 //             break;
 //       }
-
 //       audio.play();
 //       currentAudio = audio;
 //   });
 // });
+
+
+
+
 
 
 // restartBtn.addEventListener('click', function() {
