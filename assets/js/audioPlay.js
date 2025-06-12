@@ -117,9 +117,6 @@ var restartBtn = document.getElementById('restart');
 //   switch(text){
 //     case 'a':
 //       var audio = new Audio('../audio/beautiful_things.mp3')
-
-
-
 //       audio.play();
 //       break;
 //     case 'b':
