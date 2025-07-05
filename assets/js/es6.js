@@ -41,20 +41,20 @@
 // }
 // myself();
 
-// function sumAll(a,b,c,...n){
-//     let total = 0;
+function sumAll(n){
+    let total = 0;
 
-//     for(const rest of n){
-//         total+=rest;
-//     }
-//     // for(const item of sums){
-//     //     total += item;
-//     // }
-//     console.log(total + a+b+c);
-// }
+    for(const rest of n){
+        total+=rest;
+    }
+    // for(const item of sums){
+    //     total += item;
+    // }
+    console.log(total);
+}
 
-// let number = [1,2,3,4];
-// sumAll(1,2,3,4,5,6);
+let number = [1,2,3,4];
+sumAll(number);
 
 //  3. Spread operator 
 
@@ -213,27 +213,27 @@ let fruits = ["Mango","Banana","Apple"];
 // 
 // arrow function with filter and map
 
-const student = [ {
-    name : "juyel",
-    age : 25,
-    gpa : 4.00
-},
-{
-    name : "Rahim",
-    age : 25,
-    gpa : 3.50
-},
-{
-    name : "jasiim",
-    age : 25,
-    gpa : 4.50
-}
-]
+// const student = [ {
+//     name : "juyel",
+//     age : 25,
+//     gpa : 4.00
+// },
+// {
+//     name : "Rahim",
+//     age : 25,
+//     gpa : 3.50
+// },
+// {
+//     name : "jasiim",
+//     age : 25,
+//     gpa : 4.50
+// }
+// ]
 
-const filterData = student.filter(function(x){
-    return x.gpa >= 4.00;
-}).map( y => {
-    return y.age;
-});
+// const filterData = student.filter(function(x){
+//     return x.gpa >= 4.00;
+// }).map( y => {
+//     return y.age;
+// });
 
-console.log(filterData);
+// console.log(filterData);
