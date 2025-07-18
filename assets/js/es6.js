@@ -56,6 +56,8 @@ function sumAll(n){
 let number = [1,2,3,4];
 sumAll(number);
 
+
+
 //  3. Spread operator 
 
 // function FetchSum(a){
