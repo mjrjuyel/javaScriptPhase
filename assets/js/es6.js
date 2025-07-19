@@ -39,6 +39,10 @@
 // function myself(name = "Kabir"){
 //     console.log(name);
 // }
+
+
+
+
 // myself();
 
 function sumAll(n){
