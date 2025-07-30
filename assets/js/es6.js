@@ -39,10 +39,6 @@
 // function myself(name = "Kabir"){
 //     console.log(name);
 // }
-
-
-
-
 // myself();
 
 function sumAll(n){
@@ -59,8 +55,6 @@ function sumAll(n){
 
 let number = [1,2,3,4];
 sumAll(number);
-
-
 
 //  3. Spread operator 
 
