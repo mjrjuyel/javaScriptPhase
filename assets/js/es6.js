@@ -61,9 +61,9 @@ sumAll(number);
 // function FetchSum(a){
 //     return a;
 // }
+
 // let numbers = [2,4,6];
 // let number2 = [7,8,9];
-
 // concate Array :
 // numbers.push(...number2); // outpput [2,4,6,7,8,9]
 // console.log(numbers);
