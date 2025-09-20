@@ -8,6 +8,17 @@
 // var getElement = document.querySelector('#demo');
 
 // Array.from(input).map(inp =>{
+    
+
+
+
+
+
+
+
+
+
+    
 //   inp.addEventListener('change', handler);
 
 //   function handler(e){
