@@ -9,16 +9,6 @@
 
 // Array.from(input).map(inp =>{
     
-
-
-
-
-
-
-
-
-
-    
 //   inp.addEventListener('change', handler);
 
 //   function handler(e){
